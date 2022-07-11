@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,37 +22,31 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item ps-3">
-                            <a class="nav-link active  na1" aria-current="page" href="#">Home</a>
+                            <a class="nav-link active  na1" aria-current="page" href="#home">Home</a>
                         </li>
                         <li class="nav-item ps-3">
-                            <a class="nav-link active   na1" aria-current="page" href="#">About</a>
+                            <a class="nav-link active   na1" aria-current="page" href="#about">About</a>
                         </li>
                         <li class="nav-item ps-3">
-                            <a class="nav-link active  na1" aria-current="page" href="#">Services</a>
+                            <a class="nav-link active  na1" aria-current="page" href="#service">Services</a>
                         </li>
                         <li class="nav-item ps-3">
-                            <a class="nav-link active  na1" aria-current="page" href="#">Trainer</a>
+                            <a class="nav-link active  na1" aria-current="page" href="#trainer">Trainer</a>
                         </li>
                         <li class="nav-item ps-3">
-                            <a class="nav-link active  na1" aria-current="page" href="#">Join Now</a>
-                        </li>
-                        <li class="nav-item ps-3 pe-3">
-                            <a class="nav-link active  na1" aria-current="page" href="#">Login</a>
-                        </li>
+                            <a class="nav-link active  na1" aria-current="page" href="#join">Join Now</a>
+                        </li>        
                     </ul>
-                    </li>
-
                     <form class="d-flex me-5">
                         <input class="form-control me-2 rounded-pill" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-danger rounded-pill" type="submit">Search</button>
+                        <button class="btn btn-danger rounded-pill" type="submit"><a class="text-light text-decoration-none fw-bold" href="login.php">Login</a></button>
                     </form>
                 </div>
             </div>
         </nav>
     </div>
-
-
-    <div class="sec-2">
+    
+    <div id="home" class="sec-2">
         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -94,7 +87,7 @@
         </div>
     </div>
 
-    <div class="sec-3 container mt-5 pt-5">
+    <div id="about" class="sec-3 container mt-5 pt-5">
         <div>
             <h4 class="text-center fw-bold">ABOUT US</h4>
             <h6 class="text-center text-danger fw-bold">Learn About Our Gym</h6>
@@ -114,7 +107,7 @@
         </div>
     </div>
 
-    <div class="sec-4 container mt-5 pt-5">
+    <div id="service" class="sec-4 container mt-5 pt-5">
         <div>
             <h4 class="text-center fw-bold">SERVICES</h4>
             <h6 class="text-center text-danger fw-bold">Choose Your Services</h6>
@@ -189,7 +182,7 @@
         </div>
     </div>
 
-    <div class="sec-5 container mt-5 pt-5">
+    <div id="trainer" class="sec-5 container mt-5 pt-5">
         <div>
             <h4 class="text-center fw-bold">TRAINERS</h4>
             <h6 class="text-center text-danger fw-bold">Choose Your Trainer</h6>
@@ -242,12 +235,42 @@
         </div>
     </div>
 
-    <div class="sec-6 mt-5 pt-5">
+    <div id="join" class="sec-6 mt-5 pt-5">
         <div>
             <h4 class="text-center fw-bold">JOIN NOW</h4>
             <h6 class="text-center text-danger fw-bold">Book For More Experience</h6>
         </div>
+        <div class="div container w-50 mt-5 shadow p-5 docre">
 
+            <form action="joininsert.php" method="post">
+                <div class="mb-3">
+                <p class="text-center">Application Form</p> 
+                </div>
+                <div class="mb-3">
+                    <label for="name" class="form-label">User Name</label>
+                    <input placeholder="Enter Your Name" type="text" name="a_name" class="form-control" id="username">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input placeholder="Enter Your Email" type="email" name="a_email" class="form-control" id="exampleInputEmail1">
+                </div>
+
+                <div class="mb-3">
+                    <label for="mobilenum" class="form-label">Mobile Number</label>
+                    <input placeholder="Enter Your Phone Number" type="number" name="a_number" class="form-control" id="exampleInputPassword1">
+                </div>
+                <div class="mb-3">
+                    <label for="date" class="form-label">Admission Date</label>
+                    <input placeholder="Enter Your Admission Date" type="datetime-local" name="a_date" class="form-control" id="exampleInputPassword1">
+                </div>
+                <input type="submit" name="submit" class="btn btn-primary mt-3">
+            </form>
+        </div>
+
+    </div>
+
+    <div class="px-4 mt-5 pt-5 ">
+    <img class="w-100 d-flex justify-content-center rounded-3" src="https://i.ibb.co/f9k0zp1/t.jpg" alt="" srcset="">
     </div>
 
     <div class=" container sec-8 mt-5 pt-5">
