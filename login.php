@@ -20,10 +20,10 @@
         </div>
         <div class="div container w-50 mt-5 shadow p-5 docre">
 
-            <form onsubmit="myfun()" action="inserLog.php" method="post">
+            <form onsubmit="return myfun()" action="inserLog.php" method="post">
                 <div class="mb-3">
                     <label for="email" class="form-label">Email Address</label>
-                    <input placeholder="Enter Your Email" type="email" name="l_email" class="form-control" id="useremail">
+                    <input placeholder="Enter Your Email" type="email" name="l_email" class="form-control" id="useremail" require>
                 </div>
                 <div class="mb-3">
                     <label for="name" class="form-label">Password</label>

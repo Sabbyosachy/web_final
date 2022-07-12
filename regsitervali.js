@@ -7,9 +7,9 @@ function validation() {
 
 
     let namecheck = /^[A-Za-Z. ]{3,30}$/;
-    let emailcheck = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/;
+    let emailcheck = /^[a-z0-9]+@[a-z]+\.[a-z]{2,3}$/;
     let passcheck = /^(?=.*[0-9])(?=.*[!@#$%&*^])[a-zA-Z0-9!@#$%^&*]{8,16}$/;
-    let mobilecheck = /(\+88)?-?01[0-9]{9}/;
+    let mobilecheck = /^(\+88)?-?01[0-9]{9}$/;
 
     //name vali
 
