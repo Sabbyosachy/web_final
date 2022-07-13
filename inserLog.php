@@ -11,8 +11,17 @@ if(mysqli_num_rows($result)>0){
     $_SESSION['l_email']=$l_email;
     echo "<script>location.href='home.php'</script>";
 }
+elseif ($l_email == "admin12@gmail.com" && $l_password == "12345") {
+    session_start();
+    $_SESSION['Admin'] = $l_email;
+    echo "<script>location.href = 'Admin/home.php'</script>";
+}
 else{
     echo "<script>alert('Incorrect Username and Password!!!')</script>";
 }
 }
 ?>
+
+
+
+

@@ -205,7 +205,7 @@ session_start();
         </div>
     </div>
      
-    <div class="mt-5 pt-5 ps-5 pe-5">
+    <div class="mt-5 p-5 d-flex justify-content-center">
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7238.140536120851!2d91.8646838223944!3d24.895584668051615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3750552af8919883%3A0x6fc2fe33c01b3797!2sZindabazar%2C%20Sylhet!5e0!3m2!1sen!2sbd!4v1652204361272!5m2!1sen!2sbd"
             width="1250" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
