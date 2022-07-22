@@ -1,14 +1,6 @@
 <?php
-
 session_start();
-
-
 ?>
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -133,83 +125,44 @@ session_start();
     <div id="service" class="sec-4 container mt-5 pt-5">
         <div>
             <h4 class="text-center fw-bold">SERVICES</h4>
-            <h6 class="text-center text-danger fw-bold">Choose Your Services</h6>
+            <h6 class="text-center text-danger fw-bold pb-5 mb-5">Choose Your Services</h6>
         </div>
-        <div class="row mt-5 row-cols-1 row-cols-md-3 g-4">
-            <div class="col">
-                <div class="card shadow">
-                    <img src=" https://i.ibb.co/CsvVh3J/bigboix.jpg" class="card-img-top p-3" alt="...">
-                    <div class="card-body text-center">
-                        <h4 class="card-title fw-bold">Big Box Gyms</h4>
-                        <p class="card-text info">Big box gyms offer rows and rows of cardio equipment and thousands of square feet in machines and free weights for you to access, get your workout on and get on with your day.</p>
-                        <h6>Fees:$200</h6>
-                        <button class="btn btn-danger rounded-pill mt-3">Learn More</button>
-                    </div>
-                </div>
+
+        <div class="row g-4">
+        <?php 
+        include 'config.php';
+
+            $alldata = mysqli_query($conn, "SELECT * FROM `services`");
+
+            while ($row = mysqli_fetch_array($alldata)) {
+
+                ?>
+                 
+                <div class="col-md-4 col-12">
+                  <div class="card shadow">
+                 <img src="Admin/pic/<?php echo $row['image']; ?>" class="card-img-top p-3" alt="...">
+                      <div class="card-body text-center">
+                          <h4 class="card-title fw-bold"> <?php echo $row['title']; ?></h4>
+                          <p class="card-text info"><?php echo $row['info']; ?></p>
+                          <h6 class="text-danger">Fees:$<?php echo $row['fee']; ?></h6>
+                          <button class="btn btn-danger rounded-pill mt-3">Learn More</button>
+                      </div>
+                  </div>
+                  </div>
+                  
+                 
+           <?php
+            }
+           ?>
             </div>
-            <div class="col">
-                <div class="card shadow">
-                    <img src="https://i.ibb.co/Mh8BRCv/cross.jpg" class="card-img-top p-3" alt="...">
-                    <div class="card-body text-center">
-                        <h4 class="card-title fw-bold">CrossFit Gyms</h4>
-                        <p class="card-text info">A form of high intensity interval training, CrossFit is a strength and conditioning attempts workout that is made up of functional movement performed at a high intensity level.</p>
-                        <h6>Fees:$300</h6>
-                        <button class="btn btn-danger rounded-pill mt-3">Learn More</button>
-                    </div>
-                </div>
             </div>
-            <div class="col">
-                <div class="card shadow">
-                    <img src="https://i.ibb.co/0BjGwTX/power.jpg" class="card-img-top p-3" alt="...">
-                    <div class="card-body text-center">
-                        <h4 class="card-title fw-bold">Powerlifting Gyms</h4>
-                        <p class="card-text info">Powerlifting is a strength sport consisting of experience three events: squat, bench press and the deadlift. The lifter gets three attempts at a 1 rep max each lift conditioning workout.</p>
-                        <h6>Fees:$100</h6>
-                        <button class="btn btn-danger rounded-pill mt-3">Learn More</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card shadow">
-                    <img src="https://i.ibb.co/0QBNDft/yoga1.jpg" class="card-img-top p-3" alt="...">
-                    <div class="card-body text-center">
-                        <h4 class="card-title fw-bold">Yoga</h4>
-                        <p class="card-text info">The word 'Yoga' is derived from the Sanskrit root 'Yuj', meaning 'to join' or 'to yoke' or 'to unite 'Yoga also refers to an inner science comprising of a variety of methods experience.</p>
-                        <h6>Fees:$250</h6>
-                        <button class="btn btn-danger rounded-pill mt-3">Learn More</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card shadow">
-                    <img src="https://i.ibb.co/qr3Yst8/yoga.jpg " class="card-img-top p-3" alt="...">
-                    <div class="card-body text-center">
-                        <h4 class="card-title fw-bold">Boutique Gyms</h4>
-                        <p class="card-text info">Boutique gyms are immensely popular because of their ability to add new meaning to the workout experience,methods proximity is another factor that makes these gyms desirable.</p>
-                        <h6>Fees:$270</h6>
-                        <button class="btn btn-danger rounded-pill mt-3">Learn More</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card shadow">
-                    <img src="https://i.ibb.co/XXTZn0g/women.jpg" class="card-img-top p-3" alt="...">
-                    <div class="card-body text-center">
-                        <h4 class="card-title fw-bold">Women's Gyms</h4>
-                        <p class="card-text info">More than a year of a rapidly changing fitness landscape enabled women to curate their workout spaces with roommates, family, and online friends in a never-seen-before way.</p>
-                        <h6>Fees:$220</h6>
-                        <button class="btn btn-danger rounded-pill mt-3">Learn More</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
      
     <div class="mt-5 p-5 d-flex justify-content-center">
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7238.140536120851!2d91.8646838223944!3d24.895584668051615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3750552af8919883%3A0x6fc2fe33c01b3797!2sZindabazar%2C%20Sylhet!5e0!3m2!1sen!2sbd!4v1652204361272!5m2!1sen!2sbd"
             width="1250" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
     </div>
+
     <div id="trainer" class="sec-5 container mt-5 pt-5">
         <div>
             <h4 class="text-center fw-bold">TRAINERS</h4>
