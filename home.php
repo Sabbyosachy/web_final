@@ -140,7 +140,7 @@ session_start();
                  
                 <div class="col-md-4 col-12">
                   <div class="card shadow">
-                 <img src="Admin/pic/<?php echo $row['image']; ?>" class="card-img-top p-3" alt="...">
+                 <img src='Admin/<?php echo $row['image']; ?>' class="card-img-top p-3" alt="...">
                       <div class="card-body text-center">
                           <h4 class="card-title fw-bold"> <?php echo $row['title']; ?></h4>
                           <p class="card-text info"><?php echo $row['info']; ?></p>

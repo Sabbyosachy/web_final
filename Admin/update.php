@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <div class="sec-1">
+<div class="sec-1">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
                 <span><i class="fa-solid fa-dumbbell text-danger ms-5 fs-4"></i><a class="navbar-brand fw-bold fs-4" href="#"><span class="text-danger">Admin</span>Dashboard</a>
@@ -22,11 +22,11 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mx-3 mb-2 mb-lg-0">
                         <li class="nav-item ps-3">
-                            <a class="nav-link active fw-bold" aria-current="page" href="#">ADD SERVICES</a>
+                            <a class="nav-link active fw-bold" aria-current="page" href="home.php">ADD SERVICES</a>
                         </li>     
                         <li class="nav-item ps-3">
                             <a class="nav-link active fw-bold" aria-current="page" href="productList.php">PRODUCT LIST</a>
-                        </li>     
+                        </li>         
                     </ul>
                 <button class="btn btn-danger rounded-pill me-5" type="submit"><a class="text-light text-decoration-none fw-bold" href="../home.php">Logout</a></button>
                 </div>
@@ -34,10 +34,11 @@
         </nav>
     </div>
 
-    <div id="join" class="sec-6 mt-5 pt-5 pb-5">
+
+    <div class=" mt-5 pt-5 pb-5">
         <div>
-            <h4 class="text-center fw-bold">Add Service</h4>
-            <h6 class="text-center text-danger fw-bold">Added all services provoide this gym</h6>
+            <h4 class="text-center fw-bold">Update Service</h4>
+            <h6 class="text-center text-danger fw-bold">Update All Services In Your Website</h6>
         </div>
         <div class="div container w-50 mt-5 shadow p-5 docre rounded">
 
@@ -58,13 +59,13 @@
                     <label for="email" class="form-label">Fee</label>
                     <input placeholder="Enter Price" type="number" name="fee" class="form-control" id="add_fee">
                 </div>
-                <input type="submit" name="submit" class="btn btn-primary mt-3">
+                <input type="submit" name="submit" class="btn btn-success mt-3 px-5">
             </form>
         </div>
 
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 
 </html>
