@@ -34,11 +34,16 @@
         </nav>
     </div>
 
-    <?php
+   
+<?php
 session_start();
 include '../config.php';
-$alldata = mysqli_query($conn, "SELECT * FROM `services`");
+$id = $_GET['id'];
+
+$alldata = mysqli_query($conn, "SELECT * FROM `services` WHERE id = '$id'");
+
 $row = mysqli_fetch_array($alldata);
+
 
 ?>
     <div class=" mt-5 pt-5 pb-5">
