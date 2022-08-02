@@ -34,7 +34,13 @@
         </nav>
     </div>
 
+    <?php
+session_start();
+include '../config.php';
+$alldata = mysqli_query($conn, "SELECT * FROM `services`");
+$row = mysqli_fetch_array($alldata);
 
+?>
     <div class=" mt-5 pt-5 pb-5">
         <div>
             <h4 class="text-center fw-bold">Update Service</h4>
@@ -42,29 +48,33 @@
         </div>
         <div class="div container w-50 mt-5 shadow p-5 docre rounded">
 
-            <form action="addProinsert.php" method="post" enctype="multipart/form-data">
+            <form action="updateAction.php" method="post" enctype="multipart/form-data">
                 <div class="mb-3">
                     <label for="name" class="form-label">Image</label>
-                    <input placeholder="Enter Image" type="file" name="image" class="form-control" id="add_images">
+                    <input placeholder="Enter Image" type="file" name="image" class="form-control" id="add_images" value="<?php echo $row['image'] ?>">
                 </div>
+
+                <div class="mb-3">
+                <img src="<?php echo $row['image'] ?>" alt="Image" style="width:150px;">
+                </div>
+
                 <div class="mb-3">
                     <label for="name" class="form-label">Title</label>
-                    <input placeholder="Enter Title" type="text" name="title" class="form-control" id="add_title">
+                    <input placeholder="Enter Title" type="text" name="title" value="<?php echo $row['title'] ?>" class="form-control" id="add_title">
                 </div>
                 <div class="mb-3">
                     <label for="email" class="form-label">Information</label>
-                    <input placeholder="Enter information" type="text" name="info" class="form-control" id="add_info">
+                    <input placeholder="Enter information" type="text" name="info" value="<?php echo $row['info'] ?>" class="form-control" id="add_info">
                 </div>
                 <div class="mb-3">
                     <label for="email" class="form-label">Fee</label>
-                    <input placeholder="Enter Price" type="number" name="fee" class="form-control" id="add_fee">
+                    <input placeholder="Enter Price" type="number" name="fee" value="<?php echo $row['fee'] ?>" class="form-control" id="add_fee">
                 </div>
                 <input type="submit" name="submit" class="btn btn-success mt-3 px-5">
             </form>
         </div>
 
     </div>
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 

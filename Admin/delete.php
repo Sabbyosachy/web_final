@@ -13,6 +13,4 @@ echo "<script>alert('Delete Successfull')</script>";
 header("location:home.php");
 }
 
-
-
 ?>
