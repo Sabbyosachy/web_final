@@ -75,7 +75,8 @@ $row = mysqli_fetch_array($alldata);
                     <label for="email" class="form-label">Fee</label>
                     <input placeholder="Enter Price" type="number" name="fee" value="<?php echo $row['fee'] ?>" class="form-control" id="add_fee">
                 </div>
-                <input type="submit" name="submit" class="btn btn-success mt-3 px-5">
+
+                <input type="submit" name="submit" value="<?php echo $data['id'] ?>" class="btn btn-success mt-3 px-5">
             </form>
         </div>
 
