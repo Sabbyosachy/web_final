@@ -27,6 +27,9 @@
                         <li class="nav-item ps-3">
                             <a class="nav-link active fw-bold" aria-current="page" href="productList.php">PRODUCT LIST</a>
                         </li>     
+                        <li class="nav-item ps-3">
+                            <a class="nav-link active fw-bold" aria-current="page" href="productList.php">JOIN LIST</a>
+                        </li>     
                     </ul>
                 <button class="btn btn-danger rounded-pill me-5" type="submit"><a class="text-light text-decoration-none fw-bold" href="../home.php">Logout</a></button>
                 </div>

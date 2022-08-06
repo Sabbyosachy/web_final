@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,12 +7,11 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/0770b86deb.js" crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 
 <body>
-    <div class="sec-1">
+<div class="sec-1">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
                 <span><i class="fa-solid fa-dumbbell text-danger ms-5 fs-4"></i><a class="navbar-brand fw-bold fs-4"
@@ -44,42 +42,42 @@
         </nav>
     </div>
 
-    <div class="container pt-5 mt-2">
-        <h4 class="text-center fw-bold">Product List</h4>
-        <h6 class="text-center text-danger fw-bold pb-5 mb-5">All Available Product Services Are Provide</h6>
-    </div>
 
-    <div class="container pb-5 mb-5">
-    <div class="row g-4">
+   
+    <div class="container pt-5 mt-3">
+        <h4 class="text-center fw-bold">Join List</h4>
+        <h6 class="text-center text-danger fw-bold pb-5 mb-5">Number Of User Join Request Handle</h6>
+    </div>
+    
+    <div class="container">
+<div class="row g-5">
 
 <?php
 
 include '../config.php';
-$alldata = mysqli_query($conn, "SELECT * FROM `services`");
+$alldata = mysqli_query($conn, "SELECT * FROM `applyjoin`");
 while ($row = mysqli_fetch_array($alldata)) {
-    echo " <div class='col-md-6 col-12'>
-    <div class='card shadow'>
-    <img src='$row[image]' class='card-img-top p-3'>
-    <div class='card-body text-center'>
-    <h4 class='card-title fw-bold mb-3'>$row[title]</h4>
-    <p class='card-text info'>$row[info]</p>
-    <h6 class='text-danger fw-bold'>Fees:$$row[fee]</h6>
-    <button class='btn btn-success fw-bold rounded-pill my-3  px-5'><a class='edit' href='update.php? id=$row[id]'>Update</a></button>
-    <button class='btn btn-danger fw-bold rounded-pill my-3  px-5'><a class='edit' href='delete.php? id=$row[id]'>Delete</a></button>
+    echo " 
+    <div class='d-flex justify-content-center mb-3'>
+    <div class='col-md-7 col-12'>
+    <div class='card shadow p-4'>
+    <h4 class='card-title fw-bold'>$row[name]</h4>
+    <p class='card-text info'>Email: $row[email]</p>
+    <p class='card-text info'>Phone: $row[number]</p>
+    <p class='card-text info'>Date/Time: $row[date]</p>
+    <button style='width:100px;' class='btn btn-danger fw-bold rounded my-3  py-2'><a class='edit' href='applyDelete.php? id=$row[id]'>Delete</a></button>
     </div>
     </div>
-</div> ";
+    </div>
+    
+</div>
+ ";
 }
 ?>
 
 </div>
 </div>
-
-
-        </div>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-        </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 
 </html>
