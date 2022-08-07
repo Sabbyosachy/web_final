@@ -77,6 +77,54 @@ while ($row = mysqli_fetch_array($alldata)) {
 
 </div>
 </div>
+<div class="sec-7 mt-3 pt-5">
+        <div class="footer">
+            <div class="footer-container">
+                <div class="container">
+                    <div class="row sec3_row">
+                        <div class="col-md-5 wel col-12">
+                            <div class="left-container text-start">
+                                <h1 class="head">Fit&play</h1>
+                                <div class="icons-container d-flex">
+                                    <div class="icon">
+                                        <i class="fab fa-facebook"></i>
+                                    </div>
+                                    <div class="icon">
+                                        <i class="fab fa-youtube "></i>
+                                    </div>
+                                    <div class="icon">
+                                        <i class="fab fa-twitter-square "></i>
+                                    </div>
+                                </div>
+                                <p class="mt-4 ">Here You find the best gym experience..</p>
+                                <p class="mt-2">Copywrite © 2022 sabbyosachychakraborty</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 wel col-12">
+                            <div class="menu">
+
+                                <p class="menu">Home</p>
+                                <p class="menu">Add Service</p>
+                                <p class="menu">Product List</p>
+                                <p class="menu">Join List</p>
+
+                            </div>
+                        </div>
+                        <div class="col-md-4 wel col-12">
+                            <div class="iteams">
+                                <p><i class="fas fa-map-marker-alt icn "></i>Sylhet,Amborkhana,street-2</p>
+                                <p> <i class="fas fa-envelope icn "></i>fit&play@gmail.com</p>
+                                <p><i class="fas fa-phone-square-alt icn "></i>+8801612567923</p>
+                                <p><i class="fas fa-phone-square-alt icn "></i>+8801791268349</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 
